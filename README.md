@@ -1,2 +1,2 @@
 # pytest-selenium
-Test Automation Using Pytest and Selenium WebDriver
+Test Automation using Pytest and Selenium WebDriver
