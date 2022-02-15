@@ -2,7 +2,7 @@
 
 Testes automatizados utilizando Pytest e Selenium WebDriver
 
-##test_1.py
+## test_1.py
 
 1. Abrir o browser
 2. Acessar a aplicação através da sua URL
@@ -11,5 +11,10 @@ Testes automatizados utilizando Pytest e Selenium WebDriver
 5. Verificar que a aplicação permanece na mesma página
 6. Verificar mensagem de erro exibida
 
+
+## test_2.py
+
+1. Abrir o browser
+2. Acessar a aplicação através da sua URL
 
 
