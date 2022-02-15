@@ -16,5 +16,9 @@ Testes automatizados utilizando Pytest e Selenium WebDriver
 
 1. Abrir o browser
 2. Acessar a aplicação através da sua URL
-
+3. Informar usuário
+4. Informar senha
+5. Encontrar o botão "login"
+6. Clicar no botão "login"
+7. Verificar que a aplicação carrega a página Produtos
 
