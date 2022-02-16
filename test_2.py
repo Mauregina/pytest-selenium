@@ -1,25 +1,17 @@
 import pytest
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
+from pages.LoginPage import LoginPage
 
 URL = 'https://www.saucedemo.com/'
 
 class Test2:
     @pytest.fixture()
-    def setup(self):
-        self.driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
-        self.driver.get(URL)
+    def open_browser(self):
+        self.login_page = LoginPage()
         yield #o que vem depois do yield é executado apenas no final do teste
-        self.driver.quit()
+        self.login_page.close()
 
-    def test_efetuar_login(self, setup):
-        self.driver.find_element(By.ID, 'user-name').send_keys('standard_user')
-        self.driver.find_element(By.ID, 'password').send_keys('secret_sauce')
-        self.driver.find_element(By.ID, 'login-button').click()
-
-        assert self.driver.current_url == 'https://www.saucedemo.com/inventory.html', 'Página requerida encontrada!'
-        title_products = self.driver.find_element(By.CLASS_NAME, 'title').text
-
-        assert title_products == 'PRODUCTS', 'Título da página de produtos encontrado!'
+    def test_efetuar_login(self, open_browser):
+        self.login_page.efetuar_login()
+        assert self.login_page.is_inventory_url(), 'Página requerida encontrada!'
+        assert self.login_page.has_title_product(), 'Título da página de produtos encontrado!'
 
