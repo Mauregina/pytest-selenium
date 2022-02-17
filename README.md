@@ -3,20 +3,20 @@
 Testes automatizados utilizando Pytest e Selenium WebDriver
 
 ## test_1.py
-
-1. Abrir o browser
-2. Acessar a aplicação através da sua URL
-3. Clicar no botão "login"
-4. Verificar que a aplicação permanece na mesma página
-5. Verificar mensagem de erro exibida
-
+CT-001 – Realizar login sem dados 
 
 ## test_2.py
+CT-002 – Realizar login
 
-1. Abrir o browser
-2. Acessar a aplicação através da sua URL
-3. Digitar o username
-4. Digitar o password
-5. Clicar no botão "login"
-6. Verificar se a página de produtos é exibida
+## test_3.py
+CT-003 – Realizar logout da aplicação
+
+## test_4.py
+CT-004 – Adicionar um produto no carrinho de compras
+
+## test_5.py
+CT-005 – Verificar mensagem de erro ao não preencher os dados em "Checkout: Your information"
+
+## test_6.py
+CT-006 – Finalizar a compra de um produto com sucesso
 
