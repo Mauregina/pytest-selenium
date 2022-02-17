@@ -1,17 +1,12 @@
 import pytest
 from pages.LoginPage import LoginPage
-
-URL = 'https://www.saucedemo.com/'
+from pages.ProductPage import ProductPage
 
 class Test2:
-    @pytest.fixture()
-    def open_browser(self):
-        self.login_page = LoginPage()
-        yield #o que vem depois do yield é executado apenas no final do teste
-        self.login_page.close()
 
     def test_efetuar_login(self, open_browser):
-        self.login_page.efetuar_login()
-        assert self.login_page.is_inventory_url(), 'Página requerida encontrada!'
-        assert self.login_page.has_title_product(), 'Título da página de produtos encontrado!'
+        login_page = open_browser
+        login_page.efetuar_login()
+        product_page = ProductPage(login_page.driver)
+        assert product_page.is_product_page(), 'Página de produtos não encontrada!'
 
