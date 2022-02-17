@@ -7,7 +7,6 @@ class ProductPage(PageObject):
     URL_inventory = 'https://www.saucedemo.com/inventory.html'
     class_title_page = 'title'
     class_menu = 'react-burger-menu-btn'
-    class_menu = 'react-burger-menu-btn'
     class_inventory_ctn = 'inventory_container'
     txt_title = 'PRODUCTS'
 
