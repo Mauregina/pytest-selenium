@@ -34,3 +34,6 @@ class LoginPage(PageObject):
     def has_error_msg(self):
         error_msg = self.driver.find_element(By.CLASS_NAME, self.class_error_msg).text
         return error_msg == self.txt_error_msg
+
+    def is_login_page(self):
+        return self.driver.current_url == self.URL

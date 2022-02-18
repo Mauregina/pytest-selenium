@@ -8,5 +8,5 @@ class Test2:
         login_page = open_browser
         login_page.efetuar_login()
         product_page = ProductPage(login_page.driver)
-        assert product_page.is_product_page(), 'Página de produtos não encontrada!'
+        assert product_page.is_product_page(), 'Página de produtos encontrada!'
 
