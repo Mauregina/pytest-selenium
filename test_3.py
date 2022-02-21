@@ -5,12 +5,20 @@ from pages.ProductPage import ProductPage
 
 class Test3:
 
-    def test_efetuar_logout(self, efetuar_login):
-        login_page = efetuar_login
-        menu_page = MenuPage(login_page.driver)
-        menu_page.efetuar_logout()
+    @pytest.fixture()
+    def setup(self):
+        self.login_page = LoginPage(browser='chrome')
+        self.login_page.execute_login()
+        self.product_page = ProductPage(self.login_page.driver)
+        assert self.product_page.is_product_page(), "Página de Produtos não encontrada!"
+        yield
+        self.login_page.close()
 
-        assert login_page.is_login_page(), 'Página de login esta sendo exibida!'
+    def test_execute_logout(self, setup):
+        menu_page = MenuPage(self.product_page.driver)
+        menu_page.execute_logout()
+
+        assert self.login_page.is_login_url(), 'Página de login não encontrada!'
 
 
 

@@ -24,7 +24,7 @@ class MenuPage(PageObject):
     def click_logout_item(self):
         self.driver.find_element(By.ID, self.id_logout).click()
 
-    def efetuar_logout(self):
+    def execute_logout(self):
         self.open_menu()
 
         if self.is_menu_open():
