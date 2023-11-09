@@ -1,27 +1,26 @@
-# Automação de Testes 
+# Test automation
+Automation Test Structure for the website (http://www.saucedemo.com/).
 
-Estrutura de automação de testes do site http://www.saucedemo.com/.
-
-## Ferramentas
+## Tool
 * Pytest 
 * Selenium WebDriver
 
-## Cenários
+## Scenarios
 ### test_1.py
-CT-001 – Realizar login sem dados 
+TC-001 – Perform login without providing any data
 
 ### test_2.py
-CT-002 – Realizar login
+TC-002 – Perform login
 
 ### test_3.py
-CT-003 – Realizar logout da aplicação
+TC-003 – Perform logout from the application
 
 ### test_4.py
-CT-004 – Adicionar um produto no carrinho de compras
+TC-004 – Add a product to the shopping cart
 
 ### test_5.py
-CT-005 – Verificar mensagem de erro ao não preencher os dados em "Checkout: Your information"
+TC-005 – Verify error message when not filling in the data in 'Checkout: Your information'.
 
 ### test_6.py
-CT-006 – Finalizar a compra de um produto com sucesso
+TC-006 – Successfully complete the purchase of a product
 
